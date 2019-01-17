@@ -5,7 +5,7 @@ Extracts the URL from the Application page's ApplicationMaster hyperlink in the 
 ### To install:
 
 1. Clone the repo
-2. Open `chrome://extensions/`
+2. Open [chrome://extensions/](chrome://extensions/)
 3. Toggle `Developer mode` on
 4. Click `Load unpacked` and choose the directory you cloned the repo into
 
