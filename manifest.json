@@ -1,7 +1,7 @@
 {
-    "name": "Spark WebUI ApplicationMaster URL Helper",
+    "name": "Spark WebUI URL Helper",
     "version": "1.0",
-    "description": "Extracts the URL from the Application page's ApplicationMaster hyperlink in the `*ip-ddd-ddd-ddd-ddd.hostname:port*` format, and redirects the browser to a URL in the `*ddd.ddd.ddd.ddd:port*` format.",
+    "description": "Helps you navigate Spark WebUI's hyperlinks by translating them from the `*ip-ddd-ddd-ddd-ddd.hostname:port*` format into the `*ddd.ddd.ddd.ddd:port*` format.",
     "permissions": [
         "activeTab",
         "declarativeContent",
@@ -9,11 +9,19 @@
         "*://*/*"
     ], 
     "background": {
-        "scripts": ["background.js"],
+        "scripts": [
+            "background.js"
+        ],
         "persistent": false
     },
     "page_action": {
         "default_popup": "popup.html"
     },
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["omni.js", "page/clicker.js"]
+        }
+    ],
     "manifest_version": 2
   }

@@ -1,6 +1,6 @@
-## Spark WebUI ApplicationMaster URL Helper Chrome Extension
+## Spark WebUI URL Helper Chrome Extension
 
-Extracts the URL from the Application page's ApplicationMaster hyperlink in the `*ip-ddd-ddd-ddd-ddd.hostname:port*` format, and redirects the browser to a URL in the `*ddd.ddd.ddd.ddd:port*` format.
+Helps you navigate Spark WebUI's hyperlinks by translating them from the `*ip-ddd-ddd-ddd-ddd.hostname:port*` format into the `*ddd.ddd.ddd.ddd:port*` format.
 
 ### To install:
 
@@ -9,4 +9,8 @@ Extracts the URL from the Application page's ApplicationMaster hyperlink in the 
 3. Toggle `Developer mode` on
 4. Click `Load unpacked` and choose the directory you cloned the repo into
 
-After installing, open an Application page in Spark WebUI, and instead of clicking the `ApplicationMaster` link, click the extension's icon and then the `Application Master` button in the pop up.
+### After installing:
+
+1. Open SparkUI of any application
+2. Click the extension icon
+3. If there are suitable links in the current page, you will see them in the extension's pop-up; click the desired one

@@ -1,0 +1,13 @@
+a {
+    display: block;
+}
+li {
+    white-space: nowrap;
+    line-height: 1.75em;
+}
+#links {
+    padding: 0.15em 1em 0.15em 2em;
+}
+#nolinks {
+    padding: 0.25em 0.5em;
+}
