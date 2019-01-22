@@ -3,6 +3,17 @@
 //     navButton.setAttribute('value', data.color);
 // });
 
+let refresh = document.getElementById('refresh');
+refresh.onclick = function() {
+    chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+        chrome.tabs.executeScript(
+            tabs[0].id,
+            { file: './page/rewrite-urls.js' }
+        );
+        window.close();
+    });
+};
+
 // get data of all anchors-of-interest and build the pop-up's UI
 chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     chrome.tabs.executeScript(

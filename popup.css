@@ -11,12 +11,15 @@ li {
 h4 {
     margin: 0;
 }
+#refresh {
+    margin: 0.5em 0 0 1em;
+}
 #links {
     padding: 0.15em 1em 0 1em;
     list-style-position: inside;
 }
 #nolinks {
-    padding: 0.25em 0.5em;
+    padding: 0.25em 1em;
 }
 #items {
     padding: 0;

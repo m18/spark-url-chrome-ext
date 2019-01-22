@@ -13,11 +13,15 @@ chrome.runtime.onInstalled.addListener(function () {
     });
 
     chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-        if (changeInfo.status == 'complete' /* && tab.active */) {
-            chrome.tabs.executeScript(
-                tabId,
-                {file: 'page/rewrite-urls.js'}
-            );
+        if (changeInfo.status == 'complete' && tab.active) {
+            // some pages (like Executors) create their anchors on the client
+            // thus need to wait
+            setTimeout(function() {
+                chrome.tabs.executeScript(
+                    tabId,
+                    {file: 'page/rewrite-urls.js'}
+                );
+            }, 500)
         }
     });
 });
