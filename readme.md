@@ -11,6 +11,6 @@ Helps you navigate Spark WebUI's hyperlinks by translating them from the `*ip-dd
 
 ### After installing:
 
-1. Open SparkUI of any application
-2. Click the extension icon
-3. If there are suitable links in the current page, you will see them in the extension's pop-up; click the desired one
+1. Open SparkUI of any application, links should just work
+2. Click the extension's icon to see the original links in the pop-up
+3. In the pop-up, click the `Refresh` button to update the links that were added by client-side code after the page had loaded
