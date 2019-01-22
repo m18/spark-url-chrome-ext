@@ -9,12 +9,12 @@ chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
         tabs[0].id,
         { file: './page/get-link-data.js' },
         function(res) {
-            let ul = document.getElementById('links');
             if (!(res && res[0] && res[0].length)) {
-                ul.remove();
+                document.getElementById('links').remove();
                 return;
             }
             document.getElementById('nolinks').remove();
+            let ul = document.getElementById('items');
             res[0].forEach(i => {
                 let a = document.createElement('a');
                 let atext = document.createTextNode(i.text);

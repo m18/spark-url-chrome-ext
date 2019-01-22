@@ -1,13 +1,23 @@
 a {
-    display: block;
+    color: #000000;
+}
+a:hover {
+    color: #1976d2;
 }
 li {
     white-space: nowrap;
     line-height: 1.75em;
 }
+h4 {
+    margin: 0;
+}
 #links {
-    padding: 0.15em 1em 0.15em 2em;
+    padding: 0.15em 1em 0 1em;
+    list-style-position: inside;
 }
 #nolinks {
     padding: 0.25em 0.5em;
+}
+#items {
+    padding: 0;
 }
